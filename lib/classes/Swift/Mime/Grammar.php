@@ -81,7 +81,7 @@ class Swift_Mime_Grammar
         self::$_grammar['quoted-string'] = '(?:'.self::$_grammar['CFWS'].'?"'.
                 '('.self::$_grammar['FWS'].'?'.self::$_grammar['qcontent'].')*'.
                 self::$_grammar['FWS'].'?"'.self::$_grammar['CFWS'].'?)';
-        self::$_grammar['atext'] = '[a-zA-Z0-9!#\$%&\'\*\+\-\/=\?\^_`\{\}\|~]';
+        self::$_grammar['atext'] = '[a-zA-Z0-9!#\$%&\'\*\+\-\/=\?\^_`\{\}\|~\\p{L}]';
         self::$_grammar['atom'] = '(?:'.self::$_grammar['CFWS'].'?'.
                 self::$_grammar['atext'].'+'.self::$_grammar['CFWS'].'?)';
         self::$_grammar['dot-atom-text'] = '(?:'.self::$_grammar['atext'].'+'.
